@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Antarmuka pengunduh TikTok dan Instagram dengan desain liquid glass."
+    />
+    <meta name="theme-color" content="#090b13" />
+    <title>glassy — social media downloader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="desain.css" />
+    <script src="animasi.js" defer></script>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+    <div class="ambient ambient-three" aria-hidden="true"></div>
+    <div class="noise" aria-hidden="true"></div>
+
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="glassy beranda">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M16 3.5 28.5 16 16 28.5 3.5 16 16 3.5Z" fill="currentColor" />
+              <path d="m16 9 7 7-7 7-7-7 7-7Z" fill="#11121A" />
+            </svg>
+          </span>
+          <span>glassy<span class="brand-dot">.</span></span>
+        </a>
+
+        <nav class="top-nav" aria-label="Navigasi utama">
+          <a class="nav-link active" href="#downloader">Downloader</a>
+          <a class="nav-link" href="#cara-kerja">Cara kerja</a>
+        </nav>
+
+        <a class="status-pill" href="#catatan">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>Simple &amp; private</span>
+        </a>
+      </header>
+
+      <main>
+        <section class="hero" id="downloader">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span> YOUR SOCIAL MEDIA TOOLKIT</div>
+            <h1>Konten favorit,<br />selalu <span class="text-gradient">di genggaman.</span></h1>
+            <p class="hero-description">
+              Tempel tautan TikTok atau Instagram. Simpan video favoritmu dengan alur yang simpel.
+            </p>
+            <div class="hero-proof">
+              <span class="proof-icon" aria-hidden="true">✦</span>
+              <span>Tanpa login</span>
+              <span class="proof-divider"></span>
+              <span>Gratis digunakan</span>
+              <span class="proof-divider"></span>
+              <span>Privasi terjaga</span>
+            </div>
+          </div>
+
+          <div class="hero-orbit" aria-hidden="true">
+            <div class="orbit orbit-outer"></div>
+            <div class="orbit orbit-inner"></div>
+            <div class="orbit-core">
+              <span class="orbit-play">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="m9 6 10 6-10 6V6Z" fill="currentColor" />
+                </svg>
+              </span>
+            </div>
+            <span class="float-icon float-tiktok">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M15.8 3c.3 2.2 1.5 3.5 3.7 3.7v3.2a8.6 8.6 0 0 1-3.7-.9v6.2a5.8 5.8 0 1 1-5.8-5.8c.4 0 .8 0 1.2.1v3.3a2.6 2.6 0 1 0 1.4 2.3V3h3.2Z" fill="currentColor" />
+              </svg>
+            </span>
+            <span class="float-icon float-instagram">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="2" />
+                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" />
+                <circle cx="17.7" cy="6.8" r="1.1" fill="currentColor" />
+              </svg>
+            </span>
+            <span class="float-sparkle sparkle-one">✦</span>
+            <span class="float-sparkle sparkle-two">✧</span>
+          </div>
+        </section>
+
+        <section class="workspace glass-panel" aria-label="Form downloader">
+          <div class="workspace-heading">
+            <div>
+              <span class="section-kicker">MULAI DI SINI</span>
+              <h2>Link-in, beres.</h2>
+            </div>
+            <span class="step-badge"><span>01</span> / 02</span>
+          </div>
+
+          <div class="platform-switch" role="tablist" aria-label="Pilih platform">
+            <button class="platform-tab active" id="tab-tiktok" type="button" role="tab" aria-selected="true" data-platform="tiktok">
+              <span class="platform-logo tiktok-logo" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M15.8 3c.3 2.2 1.5 3.5 3.7 3.7v3.2a8.6 8.6 0 0 1-3.7-.9v6.2a5.8 5.8 0 1 1-5.8-5.8c.4 0 .8 0 1.2.1v3.3a2.6 2.6 0 1 0 1.4 2.3V3h3.2Z" fill="currentColor" />
+                </svg>
+              </span>
+              TikTok
+            </button>
+            <button class="platform-tab" id="tab-instagram" type="button" role="tab" aria-selected="false" data-platform="instagram">
+              <span class="platform-logo instagram-logo" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="2" />
+                  <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" />
+                  <circle cx="17.7" cy="6.8" r="1.1" fill="currentColor" />
+                </svg>
+              </span>
+              Instagram
+            </button>
+            <button class="platform-tab" id="tab-stalkig" type="button" role="tab" aria-selected="false" data-platform="stalkig">
+              <span class="platform-logo instagram-logo" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="2" />
+                  <path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <circle cx="10.8" cy="10.8" r="2.2" fill="currentColor" />
+                </svg>
+              </span>
+              Stalk IG
+            </button>
+            <span class="tab-indicator" aria-hidden="true"></span>
+          </div>
+
+          <form id="link-form" novalidate>
+            <label class="input-label" id="input-label" for="video-url">TEMPEL TAUTAN KONTEN</label>
+            <div class="url-input-wrap" id="url-input-wrap">
+              <span class="input-link-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M10 13.5a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1.7 1.7m2.7 4.7a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1.7-1.7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                </svg>
+              </span>
+              <input
+                id="video-url"
+                name="video-url"
+                type="url"
+                inputmode="url"
+                autocomplete="url"
+                placeholder="Tempel link TikTok di sini..."
+                aria-describedby="input-hint form-message"
+                required
+              />
+              <button class="paste-button" id="paste-button" type="button">
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <rect x="6.2" y="5.2" width="9.3" height="11" rx="1.7" stroke="currentColor" stroke-width="1.5" />
+                  <path d="M8.2 5V4.3c0-.7.6-1.3 1.3-1.3h3c.7 0 1.3.6 1.3 1.3V5" stroke="currentColor" stroke-width="1.5" />
+                  <path d="M4.2 7.3v8.4c0 .7.6 1.3 1.3 1.3h6.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+                <span>Tempel</span>
+              </button>
+            </div>
+            <p class="input-hint" id="input-hint">
+              Contoh: <button type="button" class="example-link" id="example-link">https://www.tiktok.com/@creator/video/...</button>
+            </p>
+            <div class="form-message" id="form-message" role="status" aria-live="polite"></div>
+
+            <div class="options-row" id="download-options">
+              <label class="option-control">
+                <span class="option-icon" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" fill="none">
+                    <path d="M4 5.5h12M4 10h12M4 14.5h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    <circle cx="7" cy="5.5" r="1.5" fill="#14151E" stroke="currentColor" stroke-width="1.3" />
+                    <circle cx="13" cy="10" r="1.5" fill="#14151E" stroke="currentColor" stroke-width="1.3" />
+                  </svg>
+                </span>
+                <span class="option-label">Format</span>
+                <select id="format-select" aria-label="Format file">
+                  <option value="video">Video MP4</option>
+                  <option value="audio">Audio MP3</option>
+                </select>
+                <span class="select-chevron" aria-hidden="true">⌄</span>
+              </label>
+              <span class="options-divider" aria-hidden="true"></span>
+              <label class="option-control" id="quality-control">
+                <span class="option-icon" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" fill="none">
+                    <path d="M3.5 14.5 7.3 10l2.4 2.4 4.8-6 2 2.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M3.5 4.5v11h13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <span class="option-label">Kualitas</span>
+                <select id="quality-select" aria-label="Kualitas video">
+                  <option value="best">Terbaik</option>
+                  <option value="1080">1080p</option>
+                  <option value="720">720p</option>
+                </select>
+                <span class="select-chevron" aria-hidden="true">⌄</span>
+              </label>
+            </div>
+
+            <button class="analyze-button" id="analyze-button" type="submit">
+              <span>Analisis tautan</span>
+              <span class="button-arrow" aria-hidden="true">↗</span>
+            </button>
+          </form>
+
+          <section class="result-card" id="result-card" aria-live="polite" hidden>
+            <div class="result-art" id="result-art" aria-hidden="true">
+              <span class="result-art-orb"></span>
+              <span class="result-art-play">▶</span>
+            </div>
+            <div class="result-content">
+              <span class="result-eyebrow" id="result-platform">TAUTAN TIKTOK</span>
+              <h3 id="result-title">Konten siap diunduh</h3>
+              <p id="result-description">Media berhasil diproses oleh backend.</p>
+              <div class="result-link" id="result-link"></div>
+            </div>
+            <div class="media-downloads" id="media-downloads"></div>
+          </section>
+          <p class="backend-note" id="backend-note" hidden></p>
+
+          <section class="profile-card glass-panel" id="profile-card" aria-live="polite" hidden>
+            <div class="profile-heading">
+              <img class="profile-picture" id="profile-picture" alt="Foto profil Instagram" hidden />
+              <span class="profile-avatar-fallback" id="profile-avatar-fallback" aria-hidden="true">IG</span>
+              <div class="profile-identity">
+                <span class="result-eyebrow">PROFIL INSTAGRAM</span>
+                <h3 id="profile-name">Nama profil</h3>
+                <p id="profile-username">@username</p>
+              </div>
+              <span class="verified-badge" id="profile-verified" hidden aria-label="Terverifikasi">✓</span>
+            </div>
+            <p class="profile-bio" id="profile-bio"></p>
+            <div class="profile-stats">
+              <div><strong id="profile-followers">—</strong><span>Followers</span></div>
+              <div><strong id="profile-following">—</strong><span>Following</span></div>
+              <div><strong id="profile-posts">—</strong><span>Posts</span></div>
+              <div><strong id="profile-engagement">—</strong><span>Engagement</span></div>
+            </div>
+            <p class="profile-note">Informasi publik yang dikembalikan oleh API. Gunakan secara bertanggung jawab.</p>
+          </section>
+          <p class="backend-note" id="profile-backend-note" hidden></p>
+
+          <div class="workspace-foot">
+            <span class="secure-mark" aria-hidden="true">
+              <svg viewBox="0 0 18 18" fill="none">
+                <path d="M9 2.2 14.5 4v4.3c0 3.5-2.2 5.9-5.5 7.5-3.3-1.6-5.5-4-5.5-7.5V4L9 2.2Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+                <path d="m6.8 8.8 1.5 1.5 3-3.2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span>Tautan dikirim ke backend aplikasi</span>
+            <span class="foot-separator">·</span>
+            <span>Gunakan konten secara bertanggung jawab</span>
+          </div>
+        </section>
+
+        <section class="bottom-grid">
+          <article class="info-card glass-panel" id="cara-kerja">
+            <div class="info-icon info-icon-purple" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3.5v11m0 0 4-4m-4 4-4-4M5 16.5v2A2.5 2.5 0 0 0 7.5 21h9a2.5 2.5 0 0 0 2.5-2.5v-2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div>
+              <span class="section-kicker">GAMPANG BANGET</span>
+              <h3>Cara kerjanya</h3>
+              <p>Pilih platform, tempel link, lalu cek tautan dalam satu langkah.</p>
+            </div>
+            <span class="card-number">01 — 03</span>
+          </article>
+          <article class="info-card glass-panel" id="catatan">
+            <div class="info-icon info-icon-green" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3 19 6v5.2c0 4.3-2.8 7.4-7 9.8-4.2-2.4-7-5.5-7-9.8V6l7-3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+                <path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div>
+              <span class="section-kicker">KAMU YANG KENDALIKAN</span>
+              <h3>Privasi nomor satu</h3>
+              <p>Tidak perlu login akun. Riwayat tautan tersimpan lokal di perangkatmu.</p>
+            </div>
+            <span class="card-number">PRIVATE</span>
+          </article>
+        </section>
+
+        <section class="history-section" id="recent-section" hidden>
+          <div class="history-heading">
+            <div>
+              <span class="section-kicker">DI PERANGKAT INI</span>
+              <h2>Baru saja dicek</h2>
+            </div>
+            <button class="clear-history" id="clear-history" type="button">Hapus riwayat</button>
+          </div>
+          <div class="history-list" id="history-list"></div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <a class="brand footer-brand" href="#">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M16 3.5 28.5 16 16 28.5 3.5 16 16 3.5Z" fill="currentColor" />
+              <path d="m16 9 7 7-7 7-7-7 7-7Z" fill="#11121A" />
+            </svg>
+          </span>
+          <span>glassy<span class="brand-dot">.</span></span>
+        </a>
+        <span class="footer-caption">Dibuat simpel. Dipakai dengan bijak.</span>
+        <span class="footer-copyright">© <span id="current-year"></span> glassy</span>
+      </footer>
+    </div>
+  </body>
+</html>
