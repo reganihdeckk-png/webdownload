@@ -1,0 +1,13 @@
+{
+  "name": "glassy-premium-store",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "Private premium app store using the Premku API",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
